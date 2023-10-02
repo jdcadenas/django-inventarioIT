@@ -1,0 +1,79 @@
+{% extends "layouts/base_login.html" %} {% block title %} Cierre Sesión {% endblock %}
+
+<!-- Specific Page CSS goes HERE  -->
+{% block stylesheets %}{% endblock stylesheets %} {% block content %}
+<div class="page-inner">
+  <div class="page-header">
+    <h4 class="page-title">Inicio sesión</h4>
+    <ul class="breadcrumbs">
+      <li class="nav-home">
+        <a href="#">
+          <i class="flaticon-home"></i>
+        </a>
+      </li>
+      <li class="separator">
+        <i class="flaticon-right-arrow"></i>
+      </li>
+      <li class="nav-item">
+        <a href="#">Autenticación</a>
+      </li>
+      <li class="separator">
+        <i class="flaticon-right-arrow"></i>
+      </li>
+      <li class="nav-item">
+        <a href="#">Cierre de Sesión</a>
+      </li>
+    </ul>
+  </div>
+  <div class="row">
+    <div class="col-md-12">
+      <div class="card">
+        <div class="card-header">
+          <div class="card-title">
+            <span> Cierre sesión </span>
+          </div>
+        </div>
+        <br />
+        <div class="card-body text-center">
+          <div class="mb-4">
+            <i class="feather icon-loader auth-icon"></i>
+          </div>
+          <h3 class="mb-4">Sesión Finalizada</h3>
+          <div class="mb-3">
+            <label>Gracias por utilizar inventario IT.</label>
+          </div>
+          <a href="{% url 'login' %}">
+            <button class="btn btn-primary shadow-2 mb-4">
+              Iniciar sesión de nuevo
+            </button>
+          </a>
+        </div>
+      </div>
+    </div>
+  </div>
+  <label class="d-none">
+    <i class="icon feather icon-sun" id="theme-indicator"></i>
+    <input type="checkbox" id="theme-switch" class="d-none" />
+  </label>
+  {% endblock content %} {% block extrajs %}
+  <script type="application/javascript">
+    //Notify
+    $.notify({
+    	icon: 'flaticon-alarm-1',
+    	title: 'Inventario IT',
+    	message:  "<p>" + "Gracias por pasar tiempo de calidad el el sitio." + "</p>",
+    },{
+    	type: 'info',
+    	placement: {
+    		from: "bottom",
+    		align: "right"
+    	},
+    	time: 1000,
+    });
+
+        notification.info(
+           , 'top'
+        );
+  </script>
+  {% endblock extrajs %}
+</div>

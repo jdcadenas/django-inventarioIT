@@ -15,21 +15,6 @@ Circles.create({
 	styleText:    true
 })
 
-//Notify
-$.notify({
-	icon: 'flaticon-alarm-1',
-	title: 'Inventario IT',
-	message: 'Mensaje de notificación de inventario',
-},{
-	type: 'info',
-	placement: {
-		from: "bottom",
-		align: "right"
-	},
-	time: 1000,
-});
-
-
 
 //Chart
 

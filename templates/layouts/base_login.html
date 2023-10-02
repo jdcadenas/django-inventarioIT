@@ -6,10 +6,10 @@
 <body>
     <div class="wrapper {% block wrapper_extra_class %}{% endblock wrapper_extra_class %}">
         {% include 'includes/head.html' %}
-        {% include 'includes/header.html' %}
-        <div class="{% block sidebar_class %}{% endblock sidebar_class %}">
+        {% comment %} {% include 'includes/header.html' %} {% endcomment %}
+        {% comment %} <div class="{% block sidebar_class %}{% endblock sidebar_class %}">
             {% include 'includes/sidebar-main.html' %}
-        </div>
+        </div> {% endcomment %}
         <div class="main-panel">
             {% block content %}
             {% endblock content %}

@@ -15,9 +15,13 @@ Including another URLconf
 """
 from django.contrib import admin
 from django.urls import include, path
-
+from admin_atlantis import views
 urlpatterns = [
     path('', include('home.urls')),
     path("admin/", admin.site.urls),
-    path('', include('admin_atlantis.urls')),
+    #path('', include('admin_atlantis.urls')),
+    
+]
+urlpatterns += [
+    path("accounts/", include("django.contrib.auth.urls")),
 ]
